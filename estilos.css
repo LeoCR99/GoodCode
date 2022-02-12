@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Teko:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+
+:root{
+    --c1:#21243D;
+    --c2:#FF7C7C;
+    --c3:#FFD082;
+    --c4:#88E1F2;
+    --c5:#B4FE98;
+    --l1:'PT Sans Narrow', sans-serif;
+    --l2:'Teko', sans-serif;
+    --l3:'Righteous', cursive;
+    --l4:'Cutive Mono', monospace;
+    --l5:'Mochiy Pop P One', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+    margin: 0;
+}
+body{
+    margin: 0;
+    background-color: var(--c1);
+    flex-direction: column;
+    font-family: var(--l3);
+}
+.caja{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.oculto1{
+    transform: scale(0,0);
+}
+.oculto2{
+   opacity: 0;
+   top: 50px;
+}
+.oculto3{
+    opacity: 0;
+    left: 50px;
+}
+.EstiloFondo{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*BOTONES DE REDES Y SUBIR*/
+#brn_Subir:link, #brn_Subir:visited{
+    color: #fff;
+    right: 4vw;
+    top: 80vh;
+    z-index: 5;
+    position: fixed;
+    font-size: 60px;
+    transition: all .5s;
+    transform: scale(0,0);
+}
+#brn_Subir:hover{
+    color: var(--c4);
+    text-shadow: 0 0 20px var(--color1);
+}
+#btn_Menu_Redes{
+    color: #fff;
+    cursor: pointer;
+    left: 2vw;
+    top: 85vh;
+    z-index: 5;
+    position: fixed;
+    font-size: 45px;
+    transition: all .5s;
+}
+#btn_Menu_Redes:hover{
+    color: var(--c5);
+}
+#btn_What:link,#btn_Face:link,#btn_Email:link, #btn_What:visited,#btn_Face:visited,#btn_Email:visited{
+    color: #000;
+    left: 2vw;
+    top: 85vh;
+    z-index: 5;
+    position: fixed;
+    font-size: 40px;
+    transform: scale(0,0);
+    transition: all .5s;
+}
+#btn_What:hover,#btn_Face:hover,#btn_Email:hover{
+    color: var(--c4);
+}
+
+/*PAGINA PRINCIPAL*/
+#PagPrincipal{
+    width: 98.2vw;
+    height: 100vh;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/goodcode-748cb.appspot.com/o/fondo1.jpg?alt=media&token=1c8b2f45-6d55-477d-9822-a7ec1b8c4710);
+    background-position: bottom;
+    flex-direction: column;
+    justify-content: start;
+    transition: all .5s;
+}
+#MenuNavegacion{
+    width: 90%;
+    height: 12%;
+    justify-content: space-between;
+    margin-top: 2%;
+    transition: all 2s;
+}
+#logo{
+    width: 8%;
+}
+#MenuNavegacion a:link , a:visited{
+    color: #fff;
+    text-align: center;
+    font-size: 1.4vw;
+    text-decoration: none;
+}
+.linea-hover{
+    position: relative;
+    background-color: var(--c4);
+    width: 0;
+    height: 3px;
+    transition: all .5s;
+}
+#MenuNavegacion a:hover .linea-hover{
+    width: 100%;
+}
+#Saludo{
+    width: 90%;
+    height: 88%;
+    flex-direction: column;
+    color: #fff;
+}
+#texto1{
+    color: var(--c4);
+    text-shadow: 0 0 15px #fff;
+    text-align: center;
+    font-family: var(--l1);
+    font-size: 7vw;
+    transition: all 2s;
+    transition-delay: 2s;
+}
+#texto2{
+    text-align: center;
+    width: 90%;
+    font-family: var(--l1);
+    font-size:2vw;
+    transition: all 2s;
+    transition-delay: 4s;
+}
+#texto3{
+    opacity: 0;
+    display: block;
+    white-space: nowrap;
+    flex-direction: row;
+    font-weight: bolder;
+    width: 37ch;
+    overflow: hidden;
+    text-align: center;
+    font-family: var(--l1);
+    font-size:4vw;
+    border-right: 4px solid #fff;
+    animation: typing 5s steps(37),
+    blink .5s infinite step-end alternate;
+    animation-delay: 6s;
+    transition: all .1s;
+    transition-delay: 6s;
+}
+@keyframes typing {
+    from{ width: 0 ;}
+}
+@keyframes blink {
+    50%{ border-color: transparent;}
+}
+
+/*PAGINA DE PRECIOS*/
+#PagPrecios{
+    width: 98.2vw;
+    height: auto;
+    flex-direction: column;
+    transition: all .5s;
+}
+.titulo{
+    color: #fff;
+    text-align: center;
+    font-size: 6vw;
+    border-bottom: 5px solid var(--c4);
+    text-shadow: 0 0 15px var(--c4);
+    margin:5vh 0 5vh 0;
+}
+#Titulo_Puntos_Venta{
+    border-bottom: 5px solid var(--c3);
+    text-shadow: 0 0 15px var(--c3);
+}
+#Paginas_Web,#Puntos_Venta{
+    width: 95%;
+    height: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.paqueteWeb{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    margin: 20px 0;
+    width: 350px;
+    height: auto;
+    font-family: var(--l5);
+    font-size: 35px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all .5s;
+}
+.paqueteWeb:hover{
+    transform: translateY(-20px);
+    box-shadow: 0 0 20px 0 var(--c4);
+}
+.paqueteWeb:hover .PrecioPaqueteWeb{
+    color: var(--c4);
+}
+.informacion{
+    width: 90%;
+    font-weight: bolder;
+    font-family: var(--l4);
+    font-size: 15px;
+    text-align: justify;
+}
+
+.paquetePunto{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    margin: 20px 0;
+    width: 350px;
+    height: auto;
+    font-family: var(--l5);
+    font-size: 30px;
+    text-align: center;
+    flex-direction: column;
+    transition: all .5s;
+    justify-content: space-between;
+}
+.paquetePunto:hover{
+    transform: translateY(-20px);
+    box-shadow: 0 0 20px 0 var(--c3);
+}
+.paquetePunto:hover .PrecioPaquetePunto{
+    color: var(--c3);
+}
+.PrecioPaqueteWeb, .PrecioPaquetePunto{
+    font-family: var(--l5);
+    font-size: 45px;
+}
+.btn_MeInteresa:link, .btn_MeInteresa:visited{
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 15px;
+    text-decoration: none;
+    color: #000;
+    border: 3px solid transparent ;
+    background-color: var(--c5);
+    transition: all .5s;
+}
+.btn_MeInteresa:hover{
+    border: 3px solid #000;
+}
+
+
+/*PAGINA OTROS SERVICIOS*/
+#PagOtrosServicios{
+    width: 98.2vw;
+    height: auto;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+#Titulo_Cuento_Paquete{
+    border-bottom: 5px solid var(--c2);
+    text-shadow: 0 0 15px var(--c2);
+}
+#actualizaciones{
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/goodcode-748cb.appspot.com/o/img1.jpg?alt=media&token=6f139665-1e6e-42cf-8ead-4e1ab8a09c4b);
+}
+.actualizacion, .equipo, .logotipo{
+    padding: 20px;
+    border: 1.5px solid rgba(255, 255, 255,.3);
+    border-radius: 10px;
+    width: 70%;
+    height: auto;
+    margin: 50px 0;
+    background-color: rgba(255, 255, 255,.7);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    transition: all .5s;
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0,.5);
+}
+.titulo_actualizacion, .titulo_equipos{
+    font-size: 2vw;
+    color: var(--c4);
+}
+.informacion_actualizacion, .informacion_equipos{
+    font-family: var(--l4);
+    font-weight: bolder;
+    font-size: 1.5vw;
+}
+.btn_ver_mas:link, .btn_ver_mas:visited{
+    font-size: 2vw;
+    text-decoration: none;
+    color: #000;
+    padding: 5px;
+    border-radius: 5px;
+    border: 3px solid transparent ;
+    background-color: var(--c5);
+    transition: all .5s;
+}
+.btn_ver_mas:hover{
+    border: 3px solid #000;
+}
+
+/*PAGINA CONOCENOS HISTORIA*/
+#PagConocenos{
+    width: 98.2vw;
+    height: auto;
+    flex-direction: column;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/goodcode-748cb.appspot.com/o/img4.jpg?alt=media&token=a56f7e10-4870-4ad1-9bf3-bc64b81389f2);
+}
+#img_logo_historia{
+    width: 25vw;
+}
+#historia_goodcode{
+    margin: 0 0 50px 0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    font-size: 2.3vw;
+    font-family: var(--l4);
+    background-color: rgba(255, 255, 255,.85);
+    border: 1.5px solid rgba(0, 0, 0,.3);
+}
+
+/*PIE DE PAGINA*/
+#PagPiePagina{
+    width: 98.2;
+    height: auto;
+    flex-direction: column;
+    justify-content: end;
+}
+#img_logo_Pie_Pagina{
+    margin-top: 50px;
+    width: 20vw;
+}
+#contacto{
+    margin: 150px 0;
+    font-size: 1.5vw;
+    color: var(--c4);
+    font-family: var(--l4);
+}
+#CopyRight{
+    width: 98.2vw;
+    height: 30px;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 500px){
+    #MenuNavegacion a{
+        transform: scale(0,0);
+    }
+    #logo{
+        width: 100px;
+    }
+    #btn_What:link,#btn_Face:link,#btn_Email:link, #btn_What:visited,#btn_Face:visited,#btn_Email:visited{
+        color: var(--c4);
+    }
+    #PagPrincipal{
+        height: auto;
+    }
+    #Saludo{
+        margin-bottom: 50px;
+    }
+    .paqueteWeb ,.paquetePunto{
+        width: 80vw;
+    }
+    .PrecioPaqueteWeb, .PrecioPaquetePunto{
+        font-size: 10vw;
+    }
+    #texto1{
+        font-size: 10vw;
+    }
+    #texto2{
+        font-size: 4vw;
+    }
+    #texto3{
+        font-size: 5.2vw;
+        white-space: wrap;
+    }
+    .titulo_actualizacion, .titulo_equipos{
+        font-size: 30px;
+    }
+    .informacion_actualizacion, .informacion_equipos{
+        font-size: 20px;
+    }
+    .actualizacion, .equipo, .logotipo{
+        width: 80%;
+    }
+    .btn_ver_mas:link, .btn_ver_mas:visited{
+        font-size: 30px;
+    }
+
+    #img_logo_historia{
+        width: 50vw;
+    }
+    #historia_goodcode{
+        font-size: 5.5vw;
+    }
+    #img_logo_Pie_Pagina{
+        margin-top: 20px;
+        width: 70vw;
+    }
+    #contacto{
+        text-align: center;
+        margin: 100px 0;
+        font-size: 4.8vw;
+    }
+}
